@@ -1,0 +1,46 @@
+.explore{
+    padding: 100px 0 ;
+}
+h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+p{
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+}
+.explore-box{
+    position: relative;
+    box-shadow: 0px 10px -14px 14px rgb(255, 255, 255);
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+    background-color: firebrick;
+}
+
+.explore-img img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.explore-img img:hover{
+    transform: scale(1.1);
+} 
+.explore-img h4{
+    display: block;
+    color: #fff;
+    text-shadow: -2px 2px 2px #000;
+    font-weight:600; 
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(50%, 50%);
+}

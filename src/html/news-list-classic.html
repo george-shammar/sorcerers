@@ -1,0 +1,162 @@
+{% set header_title = 'News' %}
+{% set header_size = 'sm' %}
+{% extends 'layouts/layout-1.html' %}
+{% set header_image = "/assets/images/image-3.jpg" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="nk-gap-4"></div>
+                <!-- START: Posts List -->
+                <div class="nk-blog-list-classic">
+
+                     <!-- 3. START: post-->
+                     <div class="nk-blog-post">
+                        <div class="nk-post-thumb">
+                            <!-- <div class="nk-post-type"><span class="ion-image"></span></div> -->
+                            <div class="nk-post-category">
+                                <p>Blog</p>
+                            </div>
+
+                            <a href="">
+                                <img src="{{ posts[2].thumb_full }}" alt="" class="nk-img-stretch">
+                            </a>
+                        </div>
+
+                        <div class="nk-post-content">
+                            <h2 class="nk-post-title h3">
+                                <a href="news-single-blog3.html">What Is DeFi? A Simple Guide For Beginners</a>
+                            </h2>
+                            <blockquote class="nk-blockquote">
+                                <div class="nk-blockquote-icon">“</div>
+                                <em>“The ascent of money has been essential to the ascent of man.”</em>
+                                <div class="nk-blockquote-author"> ― Niall Ferguson</div>
+                            </blockquote>
+                            <div class="nk-post-date">
+                                July 3, 2022
+                            </div>
+                            <div class="nk-post-text">
+                                <p>Money makes the world go round so they say. The good ole cliché points to the influence and power money and finances have on our day-to-day lives. When was the last time you survived a few days or even weeks without money? I’ll wait. 
+                                </p>
+                                <p>Most likely never.</p>
+                                <p>
+                                    Financial systems and transactions have been in existence for as long as mankind has existed on this planet. The financial system has nonetheless evolved and changed with the times - <a href="https://lifemathmoney.com/the-history-and-evolution-of-money/" target="_blank">from barter trade to decentralized digital currencies.</a>
+                                </p>
+                                
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="news-single-blog3.html" class="nk-btn link-effect-4">Read More</a>
+                                <p class="author-excerpt">By Naava Gladys</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- 3. END: Post-->
+                    
+
+                    <!-- 2. START: post-->
+                    <div class="nk-blog-post">
+                        <div class="nk-post-thumb">
+                            <!-- <div class="nk-post-type"><span class="ion-image"></span></div> -->
+                            <div class="nk-post-category">
+                                <p>News</p>
+                            </div>
+
+                            <a href="">
+                                <img src="{{ posts[1].thumb_full }}" alt="" class="nk-img-stretch">
+                            </a>
+                        </div>
+
+                        <div class="nk-post-content">
+                            <h2 class="nk-post-title h3">
+                                <a href="news-single-blog2.html">Insignia Receives The Next Step Microgrant From Filecoin/IPFS</a>
+                            </h2>
+                            <div class="nk-post-date">
+                                June 11, 2022
+                            </div>
+                            <div class="nk-post-text">
+                                <p>The entire team at INSIGNIA is happy to be a beneficiary of the <a href="https://filecoin.io/" target="_blank">Filecoin/IPFS</a> Next Step Microgrant.
+                                    Designed to support taking the next step after building an initial prototype with Filecoin, Insignia uses the Interplanetary File System to
+                                    store all game assets decentrally.
+                                </p>
+                                <p>
+                                    The project was a Hackathon participant sponsored by Filecoin/IPFS and hosted by <a href="https://www.encode.club/" target="_blank">Encode Club</a> in late 2021. Initially known as Mage Wars, the project won the first prize 
+                                    in the "Bridging Challenge" category and the Runner-up Prize in the "Unleash Challenge" category. This partly qualified the project for the 
+                                    Encode/Filecoin Accelerator Program.
+                                </p>
+                                
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="news-single-blog2.html" class="nk-btn link-effect-4">Read More</a>
+                                <p class="author-excerpt">By George Shammer</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- 2. END: Post-->
+                    
+                    <!-- 1. START: Post -->
+                    <div class="nk-blog-post">
+                        <div class="nk-post-thumb">
+                            <!-- <div class="nk-post-type"><span class="ion-image"></span></div> -->
+                            <div class="nk-post-category">
+                                <p>Blog</p>
+                            </div>
+
+                            <a href="">
+                                <img src="{{ posts[0].thumb_full }}" alt="" class="nk-img-stretch">
+                            </a>
+                        </div>
+
+                        <div class="nk-post-content">
+                            <h2 class="nk-post-title h3">
+                                <a href="news-single-blog1.html">So, You’re Curious? Here’s What You Need To Know About Web3</a>
+                            </h2>
+                            <div class="nk-post-date">
+                                June 4, 2022
+                            </div>
+                            <div class="nk-post-text">
+                                <p>We all have that friend who just won’t stop talking about Web3. 
+                                    Turns out I’m that friend. The Web3 hype is for a good reason. 
+                                    For most people, it is that ‘Aha’ moment where everything is starting to make sense - 
+                                    that we don’t have to be on the sidelines anymore but fully participate in how we run our lives. 
+                                </p>
+                                <p>
+                                    In case you’re wondering what the fuss is all about, well, you’re not alone. 
+                                    According to Morning Consult, 79% of U.S adults who don’t own cryptocurrency are unfamiliar with the term “Web3”. 
+                                    Nonetheless, public awareness is rapidly increasing at 41% and the term Web3 is searched close to 200k times per month according to Google Trends.
+                                </p>
+                                
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="news-single-blog1.html" class="nk-btn link-effect-4">Read More</a>
+                                <p class="author-excerpt">By Naava Gladys</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- 1. END: Post -->
+
+                
+                </div>
+            </div>
+            <div class="col-lg-4">
+                
+                <!--                     
+                    START: Sidebar
+                            
+                    Additional Classes:
+                        .nk-sidebar-left
+                        .nk-sidebar-right
+                        .nk-sidebar-sticky
+                 -->
+                <aside class="nk-sidebar nk-sidebar-right nk-sidebar-sticky">
+                    {% include "shared/sidebar-all.html" %}
+                </aside>
+                <!-- END: Sidebar -->
+            </div>
+        </div>
+    </div>
+    <div class="nk-gap-3"></div>
+{% endblock %}

@@ -1,0 +1,239 @@
+<!-- {% set header_title = posts[2].title %} -->
+{% set header_title_show = false %}
+{% set header_boxed = true %}
+{% set header_text = '
+<div class="row text-left">
+    <div class="col-lg-8">
+        <div class="nk-gap-5 d-none + d-lg-block"></div>
+        <h1 class="nk-title">What Is DeFi? A Simple Guide For Beginners</h1>
+        <blockquote class="nk-blockquote">
+            <div class="nk-blockquote-icon">“</div>
+            <em>“The ascent of money has been essential to the ascent of man.”</em>
+            <div class="nk-blockquote-author"> ― Niall Ferguson</div>
+        </blockquote>
+        <div class="nk-gap-3 d-none + d-lg-block"></div>
+        <div class="nk-gap-5 d-none + d-lg-block"></div>
+    </div>
+    <div class="col-lg-4">
+        <aside class="nk-sidebar nk-sidebar-right">
+            <div class="nk-gap-5 d-none + d-lg-block"></div>
+            <div class="nk-gap d-lg-none"></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Published:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>July 3, 2022</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Category:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>Blog</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Written by:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>Naava Gladys</td>
+                    </tr>
+                    <!-- <tr>
+                        <td><strong>Views:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>' + posts[0].views_count + '</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comments:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>' + posts[0].comments_count + '</td>
+                    </tr> -->
+                    <tr>
+                        <td><strong>Likes:</strong> &nbsp;&nbsp;</td>
+                        <td>
+                            <span class="nk-action-heart">
+                                <span class="num">' + posts[0].likes_count + '</span>
+                                <span class="like-icon ion-android-favorite-outline"></span>
+                                <span class="liked-icon ion-android-favorite"></span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="nk-gap-5 d-lg-none"></div>
+        </aside>
+    </div>
+</div>
+' %}
+{% set header_image = posts[2].thumb_full %}
+{% set header_visible = 5 %}
+{% set header_size = 'md' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="nk-blog-container nk-blog-container-offset">
+                    <!-- START: Post -->
+                    <div class="nk-blog-post nk-blog-post-single">
+                        <img class="nk-img-stretch" src="{{ posts[2].thumb_full }}" alt="">
+
+                        <!-- START: Post Text -->
+                        <div class="nk-post-text mt-0">
+                            <p>
+                                Money makes the world go round so they say. The good ole cliché points to the influence and power money and finances have on our day-to-day lives. When was the last time you survived a few days or even weeks without money? I’ll wait. 
+                            </p>
+                            <p>Most likely never.</p>
+                            <p>
+                                Financial systems and transactions have been in existence for as long as mankind has existed on this planet. The financial system has nonetheless evolved and changed with the times - <a href="https://lifemathmoney.com/the-history-and-evolution-of-money/" target="_blank">from barter trade to decentralized digital currencies.</a>
+                            </p>
+                            <h3>So what the heck is DeFi?</h3>
+                            <p>
+                                Short for Decentralized Finance, DeFi is a relatively new word that you won’t find in your dictionary. You’ll instead find quite a number of definitions on the Internet but the concepts remain the same. With that said, allow me to share the most comprehensive definition I have come across. 
+                            </p>
+                            <blockquote class="nk-blockquote">
+                                <div class="nk-blockquote-icon">“</div>
+                                <em>Decentralized finance (DeFi) according to <a href="https://capital.com/defi-definition" target="_blank">Capital</a>
+                                is a movement that aims to disrupt the current traditional financial system, and in its place create one that is open and accessible to everyone around the globe, removing the need for third-party intermediaries such as banks.</em>
+                            </blockquote>
+
+                            <p>
+                                To state it simply, there is no central figure in charge of your finances. If you have a little grasp of how the Blockchain, Bitcoin, Ethereum, and other cryptocurrencies work, then understanding DeFi just became easy peasy for you, my friend.
+                            </p>
+                            <p>But I won’t assume. </p>
+                            <p>
+                                To understand DeFi, it is important to understand how centralized or traditional financial institutions like your bank work. Every time you deposit money into your account, you make the bank richer and are left with little to no interest. Whenever you make money transfers, there are a gazillion third parties between you and the receiver waiting to feed off your money in transaction fees. Not to mention the awful 2 - 5 business days you have to wait for the transfer to happen.
+                            </p>
+                            <p>
+                                DeFi aims at taking away all these frustrations by making financial services accessible, faster, safer, and beneficial to everyone.
+                            </p>
+                            <p>
+                                The table below shows a side-by-side comparison between Traditional Finance (TradFi) and Decentralized Finance (DeFi).
+                            </p>
+                            <img class="nk-img-stretch" src="{{ posts[3].thumb_full }}" alt="comparison between Traditional Finance (TradFi) and Decentralized Finance (DeFi)">
+                            <div class="nk-gap-4"></div>
+                          
+                            <p>
+                                The illustration below further shows how DeFi has revolutionalized banking and financial transactions. 
+                            </p>
+                            
+                            <img class="nk-img-stretch" src="{{ posts[4].thumb_full }}" alt="comparison between Traditional Finance (TradFi) and Decentralized Finance (DeFi)">
+                            <div class="nk-gap-4"></div>
+                            <h3>So, what can I do with DeFi?</h3>
+                            <p>
+                                Knowing what you now know about DeFi, you might be wondering how you can get started in this space. I 100% believe in having skin in the game. 
+                            </p>
+                            <p>
+                                This new financial space provides numerous opportunities to do more thanks to <a href="https://brave.com/learn/what-are-dapps/" target="_blank">Decentralized Applications (dApps).</a>
+                            </p>
+                            <ul>
+                                <li>
+                                    Open a crypto wallet. This is a safe place to keep your crypto assets and make transactions. <a href="https://coinmarketcap.com/alexandria/article/10-best-crypto-hot-wallets-for-beginners" target="_blank">Start here</a> to find the best crypto wallet for beginners. 
+                                </li>
+                                <li>
+                                    Save. Whatever your saving goals are, DeFi enables you to do that while receiving interest on your savings.
+                                </li>
+                                <li>
+                                    Send and receive tokens. dApps like <a href="https://metamask.io/" target="_blank">Metamask</a> provide public wallet addresses that enable you to send or receive tokens, NFTs, or any other digital assets.
+                                </li>
+                                <li>
+                                    Lend and Borrow. Platforms like <a href="https://nexo.io/" target="_blank">Nexo</a>and Celsius allow you to borrow against your crypto or lend out your crypto to earn interest and other benefits.
+                                </li>
+                            </ul>
+                            <h3>Are there any downsides to DeFi?</h3>
+                            
+                            <p>
+                                Absolutely!
+                            </p>
+                            <p>
+                                DeFi is far from perfect but a work in progress. 
+                            </p>
+                            <ul>
+                                <li>
+                                    It is very risky, especially for investors. A recent case in point is the <a href="https://newsletter.banklesshq.com/p/ust-luna-meltdown-what-happened?s=r" target="_blank">UST/Luna crash </a>that saw many people lose their savings. 
+                                </li>
+                                <li>
+                                    Since the space is new, it tends to be very volatile. My two cents on this is, to think long-term. If you’re looking for quick gains, you’ll be very disappointed. 
+                                </li>
+                                <li>
+                                    There are always bad guys lurking in the shadows to take advantage of people. Scams are a reality in this space. That is why it is important that you always Do Your Own Research (DYOR).
+                                </li>
+                            </ul>
+                            <h3>Does DeFi have a future? </h3>
+                            <p>Oh yes, it does. In fact, it is so bright you might need sunglasses to look at it.</p>
+                            <p>
+                                A report by <a href="https://www.pwc.ch/en/insights/digital/defi-defining-the-future-of-finance.html" target="_blank"> PWC</a> states that DeFi is evolving and expanding swiftly to mirror the traditional financial services ecosystem. This new form of decentralized financial technology may eventually have an impact on the future of centralized finance entities, with DeFi potentially being seen as an alternative that's cheaper, quicker, and more relevant.
+                            </p>
+                            <p>
+                                DeFi use cases are becoming more popular by the day with high adoption in insurance, money markets, governance, and retail sectors.
+                            </p>
+                            <p>
+                                Here are a few stats to give you some perspective;
+                            </p>
+                            <ul>
+                                <li>
+                                    There are over 300 million crypto users worldwide. And over 18,000 businesses are already accepting cryptocurrency payments.Triple A
+                                </li>
+                                <li>
+                                    The value of investments in decentralized finance has increased 10x Since 2019 - <a href="https://finance.yahoo.com/news/global-blockchain-market-report-2021-121300653.html" target="_blank"> PR Newswire</a>
+                                </li>
+                                <li>
+                                    There are over 80 million blockchain wallet users worldwide -  <a href="https://www.buybitcoinworldwide.com/blockchain-statistics/" target="_blank"> Buy Bitcoin Worldwide</a>
+                                </li>
+                                <li>
+                                    The value of the blockchain market is predicted at nearly $70 billion by 2026 - <a href="https://finance.yahoo.com/news/global-blockchain-market-report-2021-121300653.html" target="_blank"> Yahoo Finance</a>
+                                </li>
+                            </ul>
+                            <p>
+                                If you have read up to this point, consider yourself converted. Welcome to the DeFi club. Kidding!
+                            </p>
+                            <p>
+                                DeFi as a financial system is still in the early stages. Nonetheless, its foundations and ideals are very desirable, practical and revolutionary. 
+                            </p>
+
+
+
+
+
+
+                            <!-- START: Post Meta -->
+                            <div class="nk-post-tags">
+                                Tags: &nbsp;
+                                <a href="#">Web3</a>
+                                <a href="#">Blockchain</a>
+                                <a href="#">Decentralization</a>
+                                <a href="#">DEFI</a>
+                            </div>
+                            <!-- END: Post Meta -->
+                        </div>
+                        <!-- END: Post Text -->
+
+                        <div class="nk-post-author">
+                            <!-- <div class="nk-post-author-photo">
+                                <a href="{{ users[0].url }}"><img src="{{ users[0].avatar }}" alt=""></a>
+                            </div> -->
+                        
+                            <h4 class="nk-post-author-name h5"><a href="{{ users[0].url }}">Naava Gladys</a></h4>
+                        
+                            
+                        </div>
+                       
+                        
+                    </div>
+                    <!-- END: Post -->
+
+                    <div class="nk-gap-4"></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <!--
+                    START: Sidebar
+
+                    Additional Classes:
+                        .nk-sidebar-left
+                        .nk-sidebar-right
+                        .nk-sidebar-sticky
+                -->
+                <aside class="nk-sidebar nk-sidebar-right nk-sidebar-sticky">
+                    {% include "shared/sidebar-blog.html" %}
+                </aside>
+                <!-- END: Sidebar -->
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+        <div class="nk-gap-3"></div>
+    </div>
+{% endblock %}

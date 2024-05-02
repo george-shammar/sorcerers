@@ -1,0 +1,170 @@
+{% set header_title = posts[0].title %}
+{% set header_title_show = false %}
+{% set header_boxed = true %}
+{% set header_text = '
+<div class="row text-left">
+    <div class="col-lg-8">
+        <div class="nk-gap-5 d-none + d-lg-block"></div>
+        <h1 class="nk-title">Insignia Receives The Next Step Microgrant From Filecoin/IPFS</h1>
+        <div class="nk-gap-3 d-none + d-lg-block"></div>
+        <div class="nk-gap-5 d-none + d-lg-block"></div>
+    </div>
+    <div class="col-lg-4">
+        <aside class="nk-sidebar nk-sidebar-right">
+            <div class="nk-gap-5 d-none + d-lg-block"></div>
+            <div class="nk-gap d-lg-none"></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Published:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>June 11, 2022</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Category:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>News</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Written by:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>George Shammer</td>
+                    </tr>
+                    <!-- <tr>
+                        <td><strong>Views:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>' + posts[0].views_count + '</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comments:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>' + posts[0].comments_count + '</td>
+                    </tr> -->
+                    <tr>
+                        <td><strong>Likes:</strong> &nbsp;&nbsp;</td>
+                        <td>
+                            <span class="nk-action-heart">
+                                <span class="num">' + posts[0].likes_count + '</span>
+                                <span class="like-icon ion-android-favorite-outline"></span>
+                                <span class="liked-icon ion-android-favorite"></span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="nk-gap-5 d-lg-none"></div>
+        </aside>
+    </div>
+</div>
+' %}
+{% set header_image = posts[1].thumb_full %}
+{% set header_visible = 5 %}
+{% set header_size = 'md' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="nk-blog-container nk-blog-container-offset">
+                    <!-- START: Post -->
+                    <div class="nk-blog-post nk-blog-post-single">
+                        <img class="nk-img-stretch" src="{{ posts[1].thumb_full }}" alt="">
+
+                        <!-- START: Post Text -->
+                        <div class="nk-post-text mt-0">
+                            <p>
+                                The entire team at INSIGNIA is happy to be a beneficiary of the <a href="https://filecoin.io/" target="_blank">Filecoin/IPFS</a> Next Step Microgrant.
+                                    Designed to support taking the next step after building an initial prototype with Filecoin, Insignia uses the Interplanetary File System to
+                                    store all game assets decentrally.
+                            </p>
+                            <p>
+                                The project was a Hackathon participant sponsored by Filecoin/IPFS and hosted by <a href="https://www.encode.club/" target="_blank">Encode Club</a> in late 2021. Initially known as Mage Wars, the project won the first prize 
+                                    in the "Bridging Challenge" category and the Runner-up Prize in the "Unleash Challenge" category. This partly qualified the project for the 
+                                    Encode/Filecoin Accelerator Program.
+                            </p>
+                            <p>
+                                It was a 10-week, online accelerator taking the best hackathon and early-stage 
+                                projects worldwide and helping them take the leap to become fully-fledged startups. Hosted by Encode Club
+                                and sponsored by Filecoin.
+                            </p>
+                            <h3>About Filecoin</h3>
+                            <p>
+                                Filecoin, the world’s largest decentralized network, allow users to store, request, and transfer data via a verifiable marketplace. 
+                                Filecoin is completely open-source, enabling people from all over the world to participate.
+                            </p>
+                            <p>
+                                The Filecoin protocol runs on an advanced and novel proof system — 
+                                a combination of Proof of Spacetime (PoSt) and Proof of Replication (PoRep), 
+                                to provide unmatched efficiency and reliability. Filecoin’s advanced 
+                                technology provides a robust foundation to store the world’s most valuable data sets.
+                            </p>
+                            <p>
+                                An alternative to costly cloud storage, the 
+                                Filecoin network offers efficiently priced and geographically decentralized storage, minimizing financial barriers 
+                                and allowing users to take advantage of its unmatched network capabilities.
+                            </p>
+
+                            <h3>About Encode Club</h3>
+                            <p>
+                                Encode is a leading web3 education community. 
+                                Its mission is to help ambitious, talented people achieve their personal and 
+                                professional web3 goals. Encode does this through organizing high-quality 
+                                programs including hackathons, coding boot camps, educational workshops, 
+                                and accelerators in partnership with the leading blockchain protocols. 
+                                Once participating in their program, they help people get hired through 
+                                their dedicated recruitment arm or receive investment through their investment fund.
+                            </p>
+                            <p>
+                                Contrary to the "Appear and Disappear" syndrome of many projects in the space, 
+                                Insignia is growing organically by leveraging the expertise and experience of seasoned Advisors. 
+                                One of the problems plaguing the web3 and crypto space is one we have all unfortunately become too 
+                                familiar with. Projects suddenly appear from the blues, create an insane amount of hype, 
+                                and pump their token, just to disappear after a brief period.
+                            </p>
+                            <p>
+                                We are creating a verifiable track record towards building a sustainable product and creating value for the community.
+                            </p>
+                            <!-- START: Post Meta -->
+                            <div class="nk-post-tags">
+                                Tags: &nbsp;
+                                <a href="#">Web3</a>
+                                <a href="#">Blockchain</a>
+                                <a href="#">Decentralization</a>
+                                <a href="#">Filecoin/IPFS</a>
+                            </div>
+                            <!-- END: Post Meta -->
+                        </div>
+                        <!-- END: Post Text -->
+
+                        <div class="nk-post-author">
+                            <!-- <div class="nk-post-author-photo">
+                                <a href="{{ users[0].url }}"><img src="{{ users[0].avatar }}" alt=""></a>
+                            </div> -->
+                        
+                            <h4 class="nk-post-author-name h5"><a href="{{ users[0].url }}">George Shammer</a></h4>
+                        
+                            
+                        </div>
+                       
+                        
+                    </div>
+                    <!-- END: Post -->
+
+                    <div class="nk-gap-4"></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <!--
+                    START: Sidebar
+
+                    Additional Classes:
+                        .nk-sidebar-left
+                        .nk-sidebar-right
+                        .nk-sidebar-sticky
+                -->
+                <aside class="nk-sidebar nk-sidebar-right nk-sidebar-sticky">
+                    {% include "shared/sidebar-blog.html" %}
+                </aside>
+                <!-- END: Sidebar -->
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+        <div class="nk-gap-3"></div>
+    </div>
+{% endblock %}

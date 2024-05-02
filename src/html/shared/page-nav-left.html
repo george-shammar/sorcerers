@@ -1,0 +1,148 @@
+{% macro submenu(nav) -%}
+    {% for file, item in nav -%}
+        <li class="{{ 'active' if isActiveMenuItem(file, item, filename) }} {{ 'nk-drop-item' if item.sub }}">
+            <a href="{{file | safe}}">
+                {{item.name | safe}}
+                {%- if item.description -%}
+                    <span class="nk-item-descr">{{item.description | safe}}</span>
+                {%- endif -%}
+            </a>
+            {%- if item.sub -%}
+                <ul class="dropdown">
+                    {{ submenu(item.sub) }}
+                </ul>
+            {%- endif %}
+        </li>
+    {%- endfor %}
+{%- endmacro %}
+
+<!--
+    START: Navbar
+
+    Additional Classes:
+        .nk-navbar-lg
+        .nk-navbar-align-center
+        .nk-navbar-align-right
+        .nk-navbar-overlay-content
+        .nk-navbar-light
+        .nk-navbar-no-link-effect
+-->
+<nav class="nk-navbar nk-navbar-side nk-navbar-left nk-navbar-lg nk-navbar-align-{{ nav_left_align }} nk-navbar-overlay-content{{ ' nk-navbar-light' if nav_light }}" id="nk-navbar-left">
+
+    {% if nav_side_bg %}
+    <div class="nk-navbar-bg">
+        <div class="bg-image">
+            <img src="{{ nav_side_bg }}" alt="" class="jarallax-img">
+        </div>
+    </div>
+    {% endif %}
+
+
+    <div class="nano">
+        <div class="nano-content">
+            <div class="nk-nav-table">
+                <div class="nk-nav-row">
+                    {% if nav_logo %}
+                    <a href="index.html" class="nk-nav-logo">
+                        <!-- <img src="{{ nav_logo_light if nav_light else nav_logo }}" alt="" width="130"> -->
+                        <img src="/assets/images/Insignia-logo.png" alt="" class="logo-main">
+                    </a>
+
+                    <div class="new-nav px-5">
+                        <div class="nav-item"><a href="../index-main.html">HOME</a></div>
+                        <div class="nk-gap-2"></div>
+                        <div class="nav-item"><a href="../store.html">MARKETPLACE</a></div>
+                        <div class="nk-gap-2"></div>
+                        <div class="nav-item"><a href="news-list-classic.html">NEWS</a></div>
+                        <div class="nk-gap-2"></div>
+                        <!-- <div class="nav-item"><a href="news-list-classic.html">NEWS</a></div>
+                        <div class="nk-gap-2"></div> -->
+                        <div class="nav-item"><a href="../forum-topics.html">GAMING</a></div>
+                        <div class="nk-gap-2"></div>
+                        <div class="dropdown"> 
+                            <div class="nav-item dropbtn">DOCS</div>
+                            <div class="dropdown-content">
+                                <a class="nav-item" href="#" target="_blank">Tokenomics</a>
+                                <a class="nav-item" href="#">How To Play</a>
+                            </div>
+
+                        </div>
+                        <!-- <div class="nav-item border px-4 rounded-pill border-warning"><a href="../index-game-promo.html">PLAY NOW</a></div>
+                    </div>
+                    {% endif %}
+                    <ul class="nk-nav-icons">
+                        {% if nav_search %}
+                        <li>
+                            <a href="#" class="nk-search-toggle no-link-effect">
+                                <span class="nk-icon-search"></span>
+                            </a>
+                        </li> -->
+                        {% endif %}
+                        {% if nav_cart %}
+                        <!-- <li>
+                            <a href="#" class="nk-cart-toggle no-link-effect">
+                                <span class="nk-icon-toggle">
+                                    <span class="nk-icon-toggle-front">
+                                        <span class="ion-android-cart"></span>
+                                        <span class="nk-badge">8</span>
+                                    </span>
+                                    <span class="nk-icon-toggle-back">
+                                        <span class="nk-icon-close"></span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li> -->
+                        {% endif %}
+                        {% if nav_sign %}
+                        <!-- <li>
+                            <a href="#" class="nk-sign-toggle no-link-effect">
+                                <span class="nk-icon-toggle">
+                                    <span class="nk-icon-toggle-front">
+                                        <span class="fa fa-sign-in"></span>
+                                    </span>
+                                    <span class="nk-icon-toggle-back">
+                                        <span class="nk-icon-close"></span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li> -->
+                        {% endif %}
+                    </ul>
+                </div>
+                <!-- <div class="new-nav px-5">
+                    <div class="nav-item"><a href="../index-main.html">HOME</a></div>
+                    <div class="nk-gap-2"></div> -->
+                    <!-- <div class="nav-item"><a href="store.html">MARKETPLACE</a></div>
+                    <div class="nav-item">NEWS</div>
+                    <div class="nav-item">FORUM</div>
+                    <div class="nav-item">BLOG</div> -->
+                    <!-- <div class="nav-item border px-4 rounded-pill border-warning"><a href="../index-game-promo.html">PLAY NOW</a></div> -->
+                <!-- </div> -->
+                <!--
+                    START: Navigation
+
+                    Additional Classes:
+                        .nk-nav-row-top
+                        .nk-nav-row-center
+                        .nk-nav-row-bottom
+                -->
+                <!-- <div class="nk-nav-row nk-nav-row-full nk-nav-row-{{ nav_left_align_v }}">
+                    <ul class="nk-nav" data-nav-mobile="#nk-nav-mobile">
+                        {{ submenu(navigation) }}
+                    </ul>
+                </div> -->
+                <!--
+                    END: Navigation
+                -->
+                <div class="nk-gap-6"></div>
+                <div class="nk-gap-6"></div>
+                <div class="nk-nav-row">
+                    <div class="nk-nav-footer" style="color:white;">
+                        &copy; 2022 Insignia. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- END: Navbar -->

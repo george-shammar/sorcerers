@@ -1,0 +1,221 @@
+{% set header_title = posts[0].title %}
+{% set header_title_show = false %}
+{% set header_boxed = true %}
+{% set header_text = '
+<div class="row text-left">
+    <div class="col-lg-8">
+        <div class="nk-gap-5 d-none + d-lg-block"></div>
+        <h1 class="nk-title">So, You’re Curious? Here’s What You Need To Know About Web3</h1>
+        <div class="nk-gap-3 d-none + d-lg-block"></div>
+        <div class="nk-gap-5 d-none + d-lg-block"></div>
+    </div>
+    <div class="col-lg-4">
+        <aside class="nk-sidebar nk-sidebar-right">
+            <div class="nk-gap-5 d-none + d-lg-block"></div>
+            <div class="nk-gap d-lg-none"></div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Published:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>June 4, 2022</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Category:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>Blog</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Written by:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>Naava Gladys</td>
+                    </tr>
+                    <!-- <tr>
+                        <td><strong>Views:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>' + posts[0].views_count + '</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comments:</strong> &nbsp;&nbsp;&nbsp;</td>
+                        <td>' + posts[0].comments_count + '</td>
+                    </tr> -->
+                    <tr>
+                        <td><strong>Likes:</strong> &nbsp;&nbsp;</td>
+                        <td>
+                            <span class="nk-action-heart">
+                                <span class="num">' + posts[0].likes_count + '</span>
+                                <span class="like-icon ion-android-favorite-outline"></span>
+                                <span class="liked-icon ion-android-favorite"></span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="nk-gap-5 d-lg-none"></div>
+        </aside>
+    </div>
+</div>
+' %}
+{% set header_image = posts[0].thumb_full %}
+{% set header_visible = 5 %}
+{% set header_size = 'md' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="nk-blog-container nk-blog-container-offset">
+                    <!-- START: Post -->
+                    <div class="nk-blog-post nk-blog-post-single">
+                        <img class="nk-img-stretch" src="{{ posts[0].thumb_full }}" alt="">
+
+                        <!-- START: Post Text -->
+                        <div class="nk-post-text mt-0">
+                            <p>We all have that friend who just won’t stop talking about Web3. 
+                                Turns out I’m that friend. The Web3 hype is for a good reason. 
+                                For most people, it is that ‘Aha’ moment where everything is starting to make sense - that we don’t have to be on the sidelines anymore but fully participate in how we run our lives.
+                            </p>
+                            <p>
+                                In case you’re wondering what the fuss is all about, well, you’re not alone. 
+                                According to Morning Consult, 79% of U.S adults who don’t own cryptocurrency are unfamiliar with the term “Web3”. 
+                                Nonetheless, public awareness is rapidly increasing at 41% and the term Web3 is searched close to 200k times per month according to Google Trends.
+                            </p>
+                            <p>
+                                In this article, I will break down everything you need to know about Web3 but first, let’s go back in time – a short history class leading up to Web3 as we know it today.
+                            </p>
+                            <h3>Who Invented the Internet?</h3>
+                            <p>
+                                The internet has become so integral to human life that its absence would be catastrophic. 
+                                Your online life is as essential as the oxygen you’re breathing right. 
+                                But how did this indispensable technology come about?
+                            </p>
+                            <p>
+                                Unlike other inventions, there is no one person that can take credit for creating the internet. 
+                                History.com states that the internet got its start in the United States more than 50 years ago as a government weapon in the Cold War. 
+                                For years, scientists and researchers used it to communicate and share data with one another.
+                            </p>
+                            <p>
+                                It was in 1991 that a computer genius named Tim Berners-Lee introduced the World Wide Web which was the internet that was not only used to send files from one computer to another but was itself a “web” of information that anyone on the internet could retrieve. 
+                                If this sounds like a great movie storyline, it’s because there’s one - Halt and Catch Fire
+                            </p>
+                            <p>
+                                That, ladies and gentlemen, is how the internet evolved into what we know it today. 
+                                Thank you for attending my history class!
+                            </p>
+                            <h3>Web1: Consumers</h3>
+                            <p>
+                                We are about to get nostalgic right about now. 
+                                Do you remember that internet café in your neighborhood that you used to frequent back in the 90s? I’m pretty sure you remember it didn’t offer much except text and images, right? You simply spent time scrolling through yahoo, the OG of webpages way before Google or Brave were a thing. (Are you still holding onto that yahoo email?). Web1 was the first iteration of the web. 
+                                We only read content provided on the internet.
+                            </p>
+                            <h3>Web2: Consumers and Creators</h3>
+                            <p>
+                                This is the version of the web that most people currently know and interact with. 
+                                We are not only consumers but creators as well. It has made the world more connected. 
+                                This online interaction however is controlled by big tech companies like Google and Facebook who provide services in exchange for our data. 
+                                A survey done by the National Research Group shows that 7 in 10 people don’t feel in control of how websites use their data. And this, dear reader, is among the major reasons that led to the development of Web3.
+                            </p>
+                            <h3>Web3: Consumers, Creators, and Owners</h3>
+                            <p>We’ve finally got to the gist of the article. Drumrolls, please...</p>
+                            <p>
+                                Web3 is the third generation of the web and it is changing the way we use the internet. But what exactly makes Web3 desirable over its predecessors? Let me break it down for you real quick;
+                            </p>
+
+                            <h5>Decentralized.</h5>
+                            <p>
+                                “Gosh! I knew she was going to mention that.” I just did. 
+                                This is the foundation upon which the Web3 movement is built powered by blockchain technology. 
+                                Since it is open source and peer to peer, this means that it is not controlled by a single entity or person. 
+                                All the data can be viewed publicly promoting transparency.
+                            </p>
+                            <h5>Ownership.</h5>
+                            <p>Nobody likes middlemen. 
+                                They make a lot of messes. Web3 eliminates a lot of third parties that exist in Web2. 
+                                You have direct control of your data and content and can monetize it if you want to with Web3 projects like Brave, Substack, Audius, Mirror, and Opensea to mention but a few.
+                            </p>
+                            <p>
+                                Whether it is a bank, government, or Facebook, Web3 cuts out middlemen making daily life easier, faster, and safer.
+                            </p>
+                            <h5>
+                                Privacy and Security. 
+                            </h5>
+                            <p>
+                                Who wants to have their online activities tracked and exploited? Absolutely no one. 
+                                Privacy is a basic human need and blockchain technology offers just that - the power to stay anonymous and safe. 
+                                Blockchain technology uses cryptography to ensure that all transactions and data on-chain is secure.
+                            </p>
+                            <h3>Other features of Web3 that are worth noting are;</h3>
+                            <p>It is <span style="font-weight:bold;">permissionless and allows participation</span> by anyone anywhere in the world. 
+                                It is a door that opens for anyone regardless of age, occupation, gender, location, or race for as long as you have access to the internet.
+                            </p>
+                            <p>
+                                It is <span style="font-weight:bold;">interoperability.</span> Apps, blockchains, and networks can easily work with each other allowing for a 360 participation in the ecosystem.
+                            </p>
+                            <p>
+                                <span style="font-weight:bold;">Faster transactions.</span> Say goodbye to 2 - 5 working days. Transactions are made between involved parties at the speed of light.
+                            </p>
+                            <p>
+                                <span style="font-weight:bold;">Verifiable and immutable.</span> Once data is coded on the blockchain it is verified by the peer-to-peer network of nodes through the consensus mechanism and once verified the data cannot be removed or changed.
+                            </p>
+                            <h3>What Are the Components of Web3?</h3>
+                            <p>
+                                Thought that was all. Not too fast. 
+                                Web3 may sound like an ambiguous buzzword but you can look at it as an umbrella under which you’ll find NFTs, DeFi, DAOs, DApps, and Tokens. 
+                                I will write about these in detail in another article. 
+                            </p>
+                            <h3>So, What’s the Point?</h3>
+                            <p>
+                                Let’s just get this right off the bat, Web3 is here to stay. 
+                                You can hate it, or deny it but it is happening. 
+                                Though in its early stages, there is so much money, time, and talent invested to develop this new technology.
+                            </p>
+                            <p>
+                                Whether you’re an early adopter or laggard, just like Web1 and 2, mainstream adoption will eventually be realized.
+                            </p>
+                            <h4>And don’t forget, the third time is a charm!</h4>
+                            <!-- START: Post Meta -->
+                            <div class="nk-post-tags">
+                                Tags: &nbsp;
+                                <a href="#">Web3</a>
+                                <a href="#">Blockchain</a>
+                                <a href="#">Decentralization</a>
+                            </div>
+                            <!-- END: Post Meta -->
+                        </div>
+                        <!-- END: Post Text -->
+
+                        <div class="nk-post-author">
+                            <!-- <div class="nk-post-author-photo">
+                                <a href="{{ users[0].url }}"><img src="{{ users[0].avatar }}" alt=""></a>
+                            </div> -->
+                        
+                            <h4 class="nk-post-author-name h5"><a href="{{ users[0].url }}">Naava Gladys</a></h4>
+                        
+                            <div class="nk-post-author-info">
+                                Providing quality web3 education to the curious and the enthusiasts.
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+                    <!-- END: Post -->
+
+                    <div class="nk-gap-4"></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <!--
+                    START: Sidebar
+
+                    Additional Classes:
+                        .nk-sidebar-left
+                        .nk-sidebar-right
+                        .nk-sidebar-sticky
+                -->
+                <aside class="nk-sidebar nk-sidebar-right nk-sidebar-sticky">
+                    {% include "shared/sidebar-blog.html" %}
+                </aside>
+                <!-- END: Sidebar -->
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+        <div class="nk-gap-3"></div>
+    </div>
+{% endblock %}
