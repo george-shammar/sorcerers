@@ -7,8 +7,8 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 
-contract Insignia is ERC721URIStorage, Pausable, Ownable {
-  constructor()ERC721("INSIGNIA", "INS"){
+contract Sorcerer is ERC721URIStorage, Pausable, Ownable {
+  constructor()ERC721("SORCERER", "SOC"){
 
   }
 
@@ -16,15 +16,15 @@ contract Insignia is ERC721URIStorage, Pausable, Ownable {
 
   uint256 private _price = 1200000000000000;
 
-  struct Insig {
+  struct Sorcer {
     string name;
     uint256 id;
     uint256 level;
   }
 
-  Insig[] public insignias;
+  Sorcer[] public sorcerers;
 
-  event NewInsignia(address indexed owner, uint256 id, string name, uint256 level);
+  event NewSorcerer(address indexed owner, uint256 id, string name, uint256 level);
 
   // Creation
   function _createInsignia(string memory _name, string memory tokenURI) internal {
