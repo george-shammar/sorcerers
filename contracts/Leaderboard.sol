@@ -48,7 +48,7 @@ contract Leaderboard {
         scores[i] = players[player].score;
         i++;
     }
-    scores.sort(greaterThan);
+    bubbleSortDescending(scores);
     i = 0;
     for (uint256 k = 0; k < scores.length; k++) {
         uint256 score = scores[k];
@@ -60,7 +60,7 @@ contract Leaderboard {
             }
         }
     }
-}
+  }
 
   function greaterThan(uint256 a, uint256 b) private pure returns (bool) {
     return a > b;
