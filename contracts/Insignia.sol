@@ -27,8 +27,8 @@ contract Sorcerer is ERC721URIStorage, Pausable, Ownable {
   event NewSorcerer(address indexed owner, uint256 id, string name, uint256 level);
 
   // Creation
-  function _createInsignia(string memory _name, string memory tokenURI) internal {
-    Insig memory newInsignia = Insig(_name, COUNTER, 1);
+  function _createSorcerer(string memory _name, string memory tokenURI) internal {
+   Sorcer memory newSorcerer = Sorcer(_name, COUNTER, 1);
     insignias.push(newInsignia);
     _safeMint(msg.sender, COUNTER);
     _setTokenURI(COUNTER, tokenURI);
