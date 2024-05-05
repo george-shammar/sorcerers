@@ -41,17 +41,9 @@ contract Sorcerer is ERC721URIStorage, Pausable, Ownable {
     _createInsignia(_name, tokenURI);
   }
 
-  function updateFee(uint256 _fee) external onlyOwner {
-    _price = _fee;
-  }
-
-  function getMintingPrice() public view returns (uint256) {
-    return _price;
-  }
-
    // Getters
-  function getInsignias() public view returns (Insig[] memory) {
-    return insignias;
+  function getSorcerers() public view returns (Sorcer[] memory) {
+    return sorcerers;
   }
 
   function getOwnerInsignias(address _owner) public view returns (Insig[] memory) {
