@@ -36,10 +36,8 @@ contract Sorcerer is ERC721URIStorage, Pausable, Ownable {
     COUNTER++;
   }
 
-  // function createSorcerer(string memory _name, string memory tokenURI) public payable 
   function createSorcerer(string memory _name, string memory tokenURI) public
   whenNotPaused {
-    // require(msg.value >= _price);
     _createInsignia(_name, tokenURI);
   }
 
