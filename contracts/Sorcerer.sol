@@ -8,7 +8,10 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 
 contract Sorcerer is ERC721URIStorage, Pausable, Ownable {
-  constructor()ERC721("SORCERER", "SOC"){
+  constructor(
+    string memory _name,
+    string memory _symbol
+  )ERC721(_name, _symbol){
 
   }
 
