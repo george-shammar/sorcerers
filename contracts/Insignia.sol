@@ -38,7 +38,7 @@ contract Sorcerer is ERC721URIStorage, Pausable, Ownable {
 
   function createSorcerer(string memory _name, string memory tokenURI) public
   whenNotPaused {
-    _createInsignia(_name, tokenURI);
+    _createSorcerer(_name, tokenURI);
   }
 
    // Getters
@@ -46,12 +46,12 @@ contract Sorcerer is ERC721URIStorage, Pausable, Ownable {
     return sorcerers;
   }
 
-  function getOwnerInsignias(address _owner) public view returns (Insig[] memory) {
-    Insig[] memory result = new Insig[](balanceOf(_owner));
+  function getOwnerSorcerers(address _owner) public view returns (Sorcer[] memory) {
+    Sorcer[] memory result = new Sorcer[](balanceOf(_owner));
     uint256 counter = 0;
-    for (uint256 i = 0; i < insignias.length; i++) {
+    for (uint256 i = 0; i < sorcerers.length; i++) {
       if (ownerOf(i) == _owner) {
-        result[counter] = insignias[i];
+        result[counter] = sorcerers[i];
         counter++;
       }
     }
@@ -65,7 +65,4 @@ contract Sorcerer is ERC721URIStorage, Pausable, Ownable {
   function unpause() public onlyOwner {
         _unpause();
   }
-
-
-
 }
