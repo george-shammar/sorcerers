@@ -29,15 +29,17 @@ contract Sorcerer is ERC721URIStorage, Pausable, Ownable {
   // Creation
   function _createSorcerer(string memory _name, string memory tokenURI) internal {
    Sorcer memory newSorcerer = Sorcer(_name, COUNTER, 1);
-    insignias.push(newInsignia);
+    sorcerers.push(newSorcerer);
     _safeMint(msg.sender, COUNTER);
     _setTokenURI(COUNTER, tokenURI);
-    emit NewInsignia(msg.sender, COUNTER, _name, 1);
+    emit NewSorcerer(msg.sender, COUNTER, _name, 1);
     COUNTER++;
   }
 
-  function createInsignia(string memory _name, string memory tokenURI) public payable whenNotPaused {
-    require(msg.value >= _price);
+  // function createSorcerer(string memory _name, string memory tokenURI) public payable 
+  function createSorcerer(string memory _name, string memory tokenURI) public
+  whenNotPaused {
+    // require(msg.value >= _price);
     _createInsignia(_name, tokenURI);
   }
 
