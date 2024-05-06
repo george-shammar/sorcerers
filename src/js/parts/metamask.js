@@ -272,14 +272,14 @@ const getLeaderboard = async () => {
   const contract = new ethers.Contract(LeaderboardAddress.Leaderboard, ABI.abi, signer);
 
   try {
-    // const transaction = await contract.rankings();
-    // const receipt = await transaction.wait();
-    // if (receipt.status === 0) {
-    //   console.log(receipt)
-    // } else {
-    //   console.log("can't get rankings")
-    // }
-    console.log("i made it to the leaderbaord")
+    const transaction = await contract.rankings();
+    const receipt = await transaction.wait();
+    if (receipt.status === 0) {
+      console.log(receipt)
+    } else {
+      console.log("can't get rankings")
+    }
+    // console.log("i made it to the leaderbaord")
     // console.log(receipt)
 
   } catch (error) {

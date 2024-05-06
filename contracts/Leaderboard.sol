@@ -35,9 +35,17 @@ contract Leaderboard {
 
         emit RankingsUpdated(rankings);
     }
+
+    function getRankings() public view returns (address[] memory, uint256[] memory) {
+        uint256 length = rankings.length;
+        address[] memory addresses = new address[](length);
+        uint256[] memory scores = new uint256[](length);
+
+        for (uint256 i = 0; i < length; i++) {
+            addresses[i] = rankings[i];
+            scores[i] = players[rankings[i]].score;
+        }
+
+        return (addresses, scores);
+    }
 }
-
-
-
-// 0x371663d3aBA8d9c60fd26D780930fce80dAA6dd0  contract address
-// 0x4f47757593AF70C1b1fEd4A8ca517c27D5e8a91c last one
