@@ -36,3 +36,8 @@ contract Leaderboard {
         emit RankingsUpdated(rankings);
     }
 }
+
+
+
+// 0x371663d3aBA8d9c60fd26D780930fce80dAA6dd0  contract address
+// 0x4f47757593AF70C1b1fEd4A8ca517c27D5e8a91c last one
