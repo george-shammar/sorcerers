@@ -262,7 +262,9 @@ if (mintbutton != null) {
   mintbutton.onclick = mint;
 }
 
+const getLeaderboard = async () => {
 
+}
 // const items = document.querySelectorAll("list-item");
 
 
