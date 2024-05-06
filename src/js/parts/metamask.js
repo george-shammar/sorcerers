@@ -265,63 +265,71 @@ if (mintbutton != null) {
   mintbutton.onclick = mint;
 }
 
+
+
+// const getLeaderboard = async () => {
+//   const provider = new ethers.providers.Web3Provider(window.ethereum);
+//   try {
+//     const contract = new ethers.Contract(LeaderboardAddress.Leaderboard, ABI.abi, provider);
+
+//     const rankings = await contract.getRankings();
+
+//     console.log("Rankings:", rankings);
+//   } catch (error) {
+//     console.error("Error fetching leaderboard:", error);
+//   }
+// };
+
 const getLeaderboard = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const signer = provider.getSigner();
-
-  const contract = new ethers.Contract(LeaderboardAddress.Leaderboard, ABI.abi, signer);
-
   try {
-    const transaction = await contract.rankings();
-    const receipt = await transaction.wait();
-    if (receipt.status === 0) {
-      console.log(receipt)
-    } else {
-      console.log("can't get rankings")
-    }
-    // console.log("i made it to the leaderbaord")
-    // console.log(receipt)
+    const contract = new ethers.Contract(LeaderboardAddress.Leaderboard, ABI.abi, provider);
+    const [addresses, scores] = await contract.getRankings();
+    const leaderboardContainer = document.getElementById('leaderboard-container');
+    leaderboardContainer.innerHTML = '';
 
+    for (let i = 0; i < addresses.length; i++) {
+      const address = addresses[i];
+      const score = scores[i];
+
+      const entryDiv = document.createElement('div');
+      entryDiv.classList.add('nk-social-friends-content');
+
+      const addressInfoDiv = document.createElement('div');
+      addressInfoDiv.classList.add('nk-social-friends-info');
+
+      const addressNameDiv = document.createElement('div');
+      addressNameDiv.classList.add('nk-social-friends-name');
+
+      const addressElement = document.createElement('p');
+      addressElement.textContent = address;
+      addressElement.id = 'board-address';
+
+      addressNameDiv.appendChild(addressElement);
+      addressInfoDiv.appendChild(addressNameDiv);
+
+      const scoreActionsDiv = document.createElement('div');
+      scoreActionsDiv.classList.add('nk-social-friends-actions');
+
+      const scoreElement = document.createElement('p');
+      scoreElement.textContent = `${score} Points`; // Include "Points" after the score
+      scoreElement.classList.add('nk-btn', 'nk-btn-xs', 'link-effect-4');
+      scoreElement.id = 'score';
+
+      scoreActionsDiv.appendChild(scoreElement);
+
+      entryDiv.appendChild(addressInfoDiv);
+      entryDiv.appendChild(scoreActionsDiv);
+
+      leaderboardContainer.appendChild(entryDiv);
+    }
   } catch (error) {
-    if (error.code === ERROR_CODE_TX_REJECTED_BY_USER) {
-     
-    }
-    console.error(error);
-  } finally {
-
+    console.error("Error fetching leaderboard:", error);
   }
-
-}
+};
 
 if (leaderboardbutton != null) {
   leaderboardbutton.onclick = getLeaderboard;
 }
 
-// function isItemInView(item){
-//   let rect = item.getBoundingClientRect();
-//   return (
-//       rect.top >= 0 &&
-//       rect.left >= 0 &&
-//       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// }
-
-// function callbackFunc() {
-  
-//   for (let i = 0; i < items.length; i++) {
-//     if (isItemInView(items[i])) {
-//       items[i].classList.add("show");
-//       console.log(items[i])
-//     }
-//   }
-// }
-
-// window.addEventListener("load", callbackFunc);
-// window.addEventListener("resize", callbackFunc);
-// window.addEventListener("scroll", callbackFunc);
-// const roadmap = document.getElementsByClassName('list-container')
-// roadmap.onload = callbackFunc;
-
-// window.addEventListener('DOMContentLoaded', callbackFunc)
 export { metamask };
