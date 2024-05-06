@@ -500,32 +500,6 @@
             }
         }
     },
-    "navigation_social": {
-        "social-user-activity.html": {
-            "name": "Activity"
-        },
-        "social-user-notifications.html": {
-            "name": "Notifications"
-        },
-        "social-user-messages.html": {
-            "name": "Messages",
-            "count": 192
-        },
-        "social-user-friends.html": {
-            "name": "Friends",
-            "count": 19
-        },
-        "social-user-groups.html": {
-            "name": "Groups",
-            "count": 2
-        },
-        "forum.html": {
-            "name": "Forum"
-        },
-        "social-user-settings.html": {
-            "name": "Settings"
-        }
-    },
     "navigation_social_group": {
         "social-group-activity.html": {
             "name": "Activity"
