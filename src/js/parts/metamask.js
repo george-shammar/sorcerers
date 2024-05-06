@@ -26,6 +26,7 @@ const accountsDiv = document.getElementById('accounts')
 // Basic Actions Section
 const onboardButton = document.getElementById('connectButton');
 const mintbutton = document.getElementById('mintButton');
+const refreshLeaderboardbutton = document.getElementById('refresh-board');
 const status = document.getElementById("status");
 const cid = document.getElementById("cid");
 // const getAccountsButton = document.getElementById('getAccounts')
