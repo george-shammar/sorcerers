@@ -1,7 +1,9 @@
 import 'regenerator-runtime/runtime'
 import MetaMaskOnboarding from '@metamask/onboarding'
 import contractAddress from "../../contracts/contract-address.json"
+import LeaderboardAddress from "../../contracts/leaderboard-address.json";
 import MageArtifact from "../../contracts/Insignia.json";
+import ABI from "../../contracts/Leaderboard.json";
 import { NFTStorage, File } from 'nft.storage'
 import { ethers } from "ethers";
 import { parseJSON } from 'jquery';
@@ -265,6 +267,9 @@ if (mintbutton != null) {
 const getLeaderboard = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
+
+  const contract = new ethers.Contract(LeaderboardAddress.Leaderboard, ABI.abi, signer);
+
 }
 // const items = document.querySelectorAll("list-item");
 
