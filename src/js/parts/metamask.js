@@ -26,7 +26,7 @@ const accountsDiv = document.getElementById('accounts')
 // Basic Actions Section
 const onboardButton = document.getElementById('connectButton');
 const mintbutton = document.getElementById('mintButton');
-const refreshLeaderboardbutton = document.getElementById('refresh-board');
+const leaderboardbutton = document.getElementById('refresh-board');
 const status = document.getElementById("status");
 const cid = document.getElementById("cid");
 // const getAccountsButton = document.getElementById('getAccounts')
@@ -272,13 +272,15 @@ const getLeaderboard = async () => {
   const contract = new ethers.Contract(LeaderboardAddress.Leaderboard, ABI.abi, signer);
 
   try {
-    const transaction = await contract.rankings();
-    const receipt = await transaction.wait();
-    if (receipt.status === 0) {
-      console.log(receipt)
-    } else {
-      console.log("can't get rankings")
-    }
+    // const transaction = await contract.rankings();
+    // const receipt = await transaction.wait();
+    // if (receipt.status === 0) {
+    //   console.log(receipt)
+    // } else {
+    //   console.log("can't get rankings")
+    // }
+    console.log("i made it to the leaderbaord")
+    // console.log(receipt)
 
   } catch (error) {
     if (error.code === ERROR_CODE_TX_REJECTED_BY_USER) {
@@ -291,9 +293,9 @@ const getLeaderboard = async () => {
 
 }
 
-getLeaderboard();
-// const items = document.querySelectorAll("list-item");
-
+if (leaderboardbutton != null) {
+  leaderboardbutton.onclick = getLeaderboard;
+}
 
 // function isItemInView(item){
 //   let rect = item.getBoundingClientRect();
