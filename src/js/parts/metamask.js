@@ -174,8 +174,9 @@ function metamask() {
 
 const mint = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const signer = provider.getSigner();
   try {
-    const contract = new ethers.Contract(contractAddress.Sorcerer, SorcererABI.abi, provider);
+    const contract = new ethers.Contract(contractAddress.Sorcerer, SorcererABI.abi, signer);
 
     status.innerText = "Minting game asset to your address";
     const transaction = await contract.mintTo();
