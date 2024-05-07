@@ -1,8 +1,8 @@
 import 'regenerator-runtime/runtime'
 import MetaMaskOnboarding from '@metamask/onboarding'
-import contractAddress from "../../contracts/contract-address.json"
+import contractAddress from "../../contracts/sorcerer-address.json"
 import LeaderboardAddress from "../../contracts/leaderboard-address.json";
-import MageArtifact from "../../contracts/Insignia.json";
+import SorcererABI from "../../contracts/Sorcerer.json";
 import ABI from "../../contracts/Leaderboard.json";
 import { NFTStorage, File } from 'nft.storage'
 import { ethers } from "ethers";
@@ -129,15 +129,6 @@ const initialize = async () => {
     updateButtons()
   }
 
-  
-  // function handleNewChain (chainId) {
-  //   chainIdDiv.innerHTML = chainId
-  // }
-
-  // function handleNewNetwork (networkId) {
-  //   networkDiv.innerHTML = networkId
-  // }
-
   async function getNetworkAndChainId () {
     try {
       const chainId = await ethereum.request({
@@ -181,84 +172,24 @@ function metamask() {
   window.addEventListener('DOMContentLoaded', initialize)
 }
 
-
-const NFT_STORAGE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMyNTlEMWEzNTNEMzgyNjQ4MDVmNkY4Y2NjMTY0RThFODQzM0I0MDYiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTYzNzkzOTM1Njc5NywibmFtZSI6IkF6YW5pYSJ9.Tn3kou1OKA09gdsp0pduKzFUJGAVQ8KXk1-44pLWH9w";
-
-const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
-
 const mint = async () => {
-  
   const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const signer = provider.getSigner();
-  const contract = new ethers.Contract(contractAddress.Insignia, MageArtifact.abi, signer);
-  const mintingPrice= "1200000000000000";
-  
-
   try {
-    
-    const client = new NFTStorage({ token: NFT_STORAGE_KEY });
-    
-    status.innerText = 'Creating asset and uploading with nft.storage';
-    
-    // const metadata = await client.store({
-      
-    //   name: "Insignia",
-    //   description: "Insignia Test Asset",
-    //   image: new File(["/assets/images/Insignia-logo.png"], "Insignia-logo.png", { type: "image/jpg"})
-      
-    // });
-    
-    
-    const metadata = "ipfs://bafyreiav5f2yng46t56vshshfe2llxlzztb6anrywvkk6dutp5si3kp4hq/metadata.json"
-    status.innerText = `Minting token with metadata URI: ${metadata}`;
-    
-    // status.innerText = `Minting token with metadata URI: ${metadata.url}`;
-    const metadataURI = metadata;
+    const contract = new ethers.Contract(contractAddress.Sorcerer, SorcererABI.abi, provider);
 
-    // ipfs://bafyreiav5f2yng46t56vshshfe2llxlzztb6anrywvkk6dutp5si3kp4hq/metadata.json
-    // const host = "https://nftstorage.link/ipfs/"
-
-    const myArray = metadataURI.split("");
-    const last = myArray.length - 1;
-    const newArray= myArray.splice(7, last);
-    const CID = newArray.join('');
-    const finalArray =  "https://nftstorage.link/ipfs/" + `${CID}`
-    
-    
-    const name = "Insignia Test Asset";
-    const transaction = await contract.createInsignia(name, metadataURI, { value: mintingPrice });
-
+    status.innerText = "Minting game asset to your address";
+    const transaction = await contract.mintTo();
     status.innerText = "Awaiting confirmation...";
-
     const receipt = await transaction.wait();
     if (receipt.status === 0) {
-        // throw new Error("Transaction failed");
         status.innerText = "Transaction Failed";
-
     } else {
-      // console.log("successful");
       status.innerText = "Congratulations!! Successfully completed.";
-      cid.innerText = "Checkout your asset:" + " " + " " + " " + `${finalArray}`;
-      
-      const exclusive = document.querySelector('#pass');
-      exclusive.innerText = "Your exclusive pass to the gaming community"
-      exclusive.onclick = function() {
-        var redirectWindow = window.open('https://app.niftykit.com/access/c61cf979-e81b-4bba-a4e8-a21c417322a8', '_blank');
-        redirectWindow.location;
-      };
+      cid.innerText = "If you haven't already, await instruction to download Sorcerer.";
     }
-
   } catch (error) {
-    if (error.code === ERROR_CODE_TX_REJECTED_BY_USER) {
-      status.innerText = `${error.message}`;
-      return;
-    }
-    console.error(error);
-    status.innerText = "error";
-  } finally {
-
+    console.error("Error minting asset:", error);
   }
-
 }
 
 if (mintbutton != null) {

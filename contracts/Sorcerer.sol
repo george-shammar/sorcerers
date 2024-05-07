@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: UNLICENSED
-
 pragma solidity 0.8.23;
 
 import "https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC721.sol";
@@ -21,12 +20,12 @@ contract Sorcerer is ERC721 {
     Sorcer[] public sorcerers;
     event NewSorcerer(address indexed owner, uint256 id, uint256 season);
 
-    function mintTo(address recipient) public returns (uint256) {
+    function mintTo() public returns (uint256) {
         uint256 newItemId = ++currentTokenId;
         Sorcer memory newSorcerer = Sorcer(newItemId, 1);
         sorcerers.push(newSorcerer);
-        _safeMint(recipient, newItemId);
-        emit NewSorcerer(recipient, newItemId, 1);
+        _safeMint(msg.sender, newItemId);
+        emit NewSorcerer(msg.sender, newItemId, 1);
         return newItemId;
     }
 
@@ -51,5 +50,6 @@ contract Sorcerer is ERC721 {
         return result;
     }
 }
+
 
 // Sorcerer, SOC
