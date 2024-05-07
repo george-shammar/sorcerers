@@ -265,32 +265,22 @@ if (mintbutton != null) {
   mintbutton.onclick = mint;
 }
 
-
-
-// const getLeaderboard = async () => {
-//   const provider = new ethers.providers.Web3Provider(window.ethereum);
-//   try {
-//     const contract = new ethers.Contract(LeaderboardAddress.Leaderboard, ABI.abi, provider);
-
-//     const rankings = await contract.getRankings();
-
-//     console.log("Rankings:", rankings);
-//   } catch (error) {
-//     console.error("Error fetching leaderboard:", error);
-//   }
-// };
-
 const getLeaderboard = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   try {
     const contract = new ethers.Contract(LeaderboardAddress.Leaderboard, ABI.abi, provider);
     const [addresses, scores] = await contract.getRankings();
+
     const leaderboardContainer = document.getElementById('leaderboard-container');
+
     leaderboardContainer.innerHTML = '';
 
     for (let i = 0; i < addresses.length; i++) {
       const address = addresses[i];
       const score = scores[i];
+
+      // Format the address string
+      const formattedAddress = String(address).substring(0, 6) + "..." + String(address).substring(38);
 
       const entryDiv = document.createElement('div');
       entryDiv.classList.add('nk-social-friends-content');
@@ -302,7 +292,7 @@ const getLeaderboard = async () => {
       addressNameDiv.classList.add('nk-social-friends-name');
 
       const addressElement = document.createElement('p');
-      addressElement.textContent = address;
+      addressElement.textContent = formattedAddress; // Use the formatted address
       addressElement.id = 'board-address';
 
       addressNameDiv.appendChild(addressElement);
