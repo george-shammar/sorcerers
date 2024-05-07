@@ -4,9 +4,7 @@ import contractAddress from "../../contracts/sorcerer-address.json"
 import LeaderboardAddress from "../../contracts/leaderboard-address.json";
 import SorcererABI from "../../contracts/Sorcerer.json";
 import ABI from "../../contracts/Leaderboard.json";
-import { NFTStorage, File } from 'nft.storage'
 import { ethers } from "ethers";
-import { parseJSON } from 'jquery';
 
 const currentUrl = new URL(window.location.href)
 const forwarderOrigin = currentUrl.hostname === 'localhost'
