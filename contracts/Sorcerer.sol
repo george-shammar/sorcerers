@@ -1,49 +1,42 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity 0.8.23;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/security/Pausable.sol";
+import "https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC721.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Strings.sol";
 
 contract Sorcerer is ERC721 {
+    uint256 public currentTokenId;
+
     constructor(
         string memory _name,
         string memory _symbol
     ) ERC721(_name, _symbol) {}
 
-    uint256 COUNTER;
-
-    uint256 private _price = 1200000000000000;
-
     struct Sorcer {
-        string name;
         uint256 id;
-        uint256 level;
+        uint256 season;
     }
 
     Sorcer[] public sorcerers;
+    event NewSorcerer(address indexed owner, uint256 id, uint256 season);
 
-    event NewSorcerer(address indexed owner, uint256 id, string name, uint256 level);
-
-    // Creation
-    function _createSorcerer(string memory _name, address _owner) internal {
-        Sorcer memory newSorcerer = Sorcer(_name, COUNTER, 1);
+    function mintTo(address recipient) public returns (uint256) {
+        uint256 newItemId = ++currentTokenId;
+        Sorcer memory newSorcerer = Sorcer(newItemId, 1);
         sorcerers.push(newSorcerer);
-        _safeMint(_owner, COUNTER);
-        // _setTokenURI(COUNTER, tokenURI);
-        emit NewSorcerer(_owner, COUNTER, _name, 1);
-        COUNTER++;
+        _safeMint(recipient, newItemId);
+        emit NewSorcerer(recipient, newItemId, 1);
+        return newItemId;
     }
 
-    function createSorcerer(string memory _name) public {
-        _createSorcerer(_name, msg.sender);
-    }
-
-    // Getters
+     // Getters
     function getSorcerers() public view returns (Sorcer[] memory) {
         return sorcerers;
+    }
+
+    function tokenURI(uint256 id) public view virtual override returns (string memory) {
+        return Strings.toString(id);
     }
 
     function getOwnerSorcerers(address _owner) public view returns (Sorcer[] memory) {
@@ -58,3 +51,5 @@ contract Sorcerer is ERC721 {
         return result;
     }
 }
+
+// Sorcerer, SOC
