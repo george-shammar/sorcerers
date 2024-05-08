@@ -116,6 +116,7 @@ const initialize = async () => {
   
   function handleNewAccounts (newAccounts) {
     accounts = newAccounts
+    localStorage.setItem('accounts', JSON.stringify(accounts));
     
     accountsDiv.innerHTML =
     String(accounts).substring(0, 6) +
@@ -254,24 +255,27 @@ if (leaderboardbutton != null) {
 }
 
 // ================ Social Registeration stuff ===========================
-// if (accounts) {
-//   const address = accounts;
-// } else {
-//   const connectMessage = document.getElementById("not-connected-wallet");
-//   connectMessage.innerHTML = "You need to connect a wallet on the 'Play Now' page";
-// }
+const mintProfile = async () => {
+
+}
+
 document.getElementById("registerButton").addEventListener("click", function(event) {
   event.preventDefault();
   
-  // Get username and avatar inputs
   const usernameInput = document.getElementById("nft-username");
   const avatarInput = document.getElementById("nft-avatar");
 
   const username = usernameInput.value;
   const avatarUrl = avatarInput.value;
-
-  console.log("Username:", username);
-  console.log("Avatar URL:", avatarUrl);
+  const connectedAccount = localStorage.getItem('accounts');
+  let address;
+  if (connectedAccount) {
+    address = JSON.parse(connectedAccount);
+    console.log("Username:", username);
+    console.log("Avatar URL:", avatarUrl);
+    console.log("Address:", address[0]);
+    // mintProfile()
+  }
 
   usernameInput.value = "";
   avatarInput.value = "";
