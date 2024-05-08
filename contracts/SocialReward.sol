@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./SocToken.sol";
+import "./SorcererToken.sol";
 
 contract SocialReward is ERC721URIStorage, Ownable {
     SorcererToken public token;
@@ -17,14 +17,14 @@ contract SocialReward is ERC721URIStorage, Ownable {
         string avatar;
     }
 
-    mapping(uint256 => NFT) public nfts; // Mapping to store NFT data by token ID
-    uint256 private nextTokenId = 1; // Counter for the next available token ID
+    mapping(uint256 => NFT) public nfts;
+    uint256 private nextTokenId = 1;
 
-    constructor(SorcererToken _token) ERC721("SocialRewardNFT", "SRNFT") {
+    constructor(SorcererToken _token) ERC721("SocererRewardNFT", "SRNFT") Ownable(msg.sender){
         token = _token;
     }
 
-    function mintNFT(address to, string memory username, string memory avatar, string memory tokenURI) external onlyOwner returns (uint256) {
+    function mintNFT(address to, string memory username, string memory avatar, string memory tokenURI) external returns (uint256) {
         uint256 tokenId = nextTokenId++;
         _mint(to, tokenId);
         _setTokenURI(tokenId, tokenURI);
