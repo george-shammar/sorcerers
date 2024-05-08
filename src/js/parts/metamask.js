@@ -4,6 +4,7 @@ import contractAddress from "../../contracts/sorcerer-address.json"
 import LeaderboardAddress from "../../contracts/leaderboard-address.json";
 import SorcererABI from "../../contracts/Sorcerer.json";
 import ABI from "../../contracts/Leaderboard.json";
+import SocialReward from "../../contracts/sorcererReward-address.json";
 import { ethers } from "ethers";
 
 const currentUrl = new URL(window.location.href)
