@@ -297,4 +297,43 @@ document.getElementById("registerButton").addEventListener("click", function(eve
   avatarInput.value = "";
 });
 
+// ================ Activate Reward Stuff ===========================
+// const activateReward = async (recipients, creator, amount) => {
+const activateReward = async () => {
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const signer = provider.getSigner();
+  // const rewardButton = document.getElementById("reward");
+  const status = document.getElementById("reward_status");
+  try {
+    const contract = new ethers.Contract(SocialReward.SocialReward, RewardABI.abi, signer);
+    status.innerText = "Activating payout...";
+    // =========
+    const recipients = ["0x99aD37e023bd1599767b4d127d38ED3af21Df385", "0x992738165df4e52D28d02661F8050FdD530B7f87", "0x909045516Ee992b9A8FF98b2613CE71e2b2B91ad"]
+    const connectedAccount = localStorage.getItem('accounts');
+    let address;
+    if (connectedAccount) {
+      address = JSON.parse(connectedAccount);
+      const creator = address[0]
+      const transaction = await contract.distributeRewards(recipients, creator, 1000);
+      status.innerText = "Awaiting confirmation...";
+      const receipt = await transaction.wait();
+      if (receipt.status === 0) {
+        status.innerText = "Transaction Failed";
+      } else {
+        status.innerText = "Congratulations!! Reward activation successfull.";
+      }
+    }
+   
+    // =========
+    // const transaction = await contract.distributeRewards(recipients, creator, amount);
+  } catch (error) {
+
+  }
+};
+
+const rewardActivatebutton = document.getElementById("reward");
+if (rewardActivatebutton != null) {
+  rewardActivatebutton.onclick = activateReward;
+}
+
 export { metamask };
