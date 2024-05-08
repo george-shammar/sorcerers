@@ -5,6 +5,7 @@ import LeaderboardAddress from "../../contracts/leaderboard-address.json";
 import SorcererABI from "../../contracts/Sorcerer.json";
 import ABI from "../../contracts/Leaderboard.json";
 import SocialReward from "../../contracts/sorcererReward-address.json";
+import RewardABI from "../../contracts/SorcererReward.json";
 import { ethers } from "ethers";
 
 const currentUrl = new URL(window.location.href)
@@ -259,8 +260,19 @@ if (leaderboardbutton != null) {
 const mintProfile = async (address, username, avatar) => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
+  const status = document.getElementById("profile-mint-status");
   try {
-
+    const contract = new ethers.Contract(SocialReward.SocialReward, RewardABI.abi, signer);
+    status.innerText = "Wait! We're minting your Profile.";
+    const uri = "https"
+    const transaction = await contract.mintProfile(address, username, avatar, uri);
+    status.innerText = "Awaiting confirmation...";
+    const receipt = await transaction.wait();
+    if (receipt.status === 0) {
+        status.innerText = "Transaction Failed";
+    } else {
+      status.innerText = "Congratulations!! Successfully completed.";
+    }
   } catch (error) {
 
   }
