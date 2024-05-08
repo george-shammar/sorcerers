@@ -195,6 +195,7 @@ if (mintbutton != null) {
   mintbutton.onclick = mint;
 }
 
+// ================ Leaderboard's stuff ===========================
 const getLeaderboard = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   try {
@@ -251,5 +252,30 @@ const getLeaderboard = async () => {
 if (leaderboardbutton != null) {
   leaderboardbutton.onclick = getLeaderboard;
 }
+
+// ================ Social Registeration stuff ===========================
+// if (accounts) {
+//   const address = accounts;
+// } else {
+//   const connectMessage = document.getElementById("not-connected-wallet");
+//   connectMessage.innerHTML = "You need to connect a wallet on the 'Play Now' page";
+// }
+document.getElementById("registerButton").addEventListener("click", function(event) {
+  event.preventDefault();
+  
+  // Get username and avatar inputs
+  const usernameInput = document.getElementById("nft-username");
+  const avatarInput = document.getElementById("nft-avatar");
+
+  const username = usernameInput.value;
+  const avatarUrl = avatarInput.value;
+
+  console.log("Username:", username);
+  console.log("Avatar URL:", avatarUrl);
+
+  usernameInput.value = "";
+  avatarInput.value = "";
+
+});
 
 export { metamask };
