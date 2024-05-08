@@ -255,9 +255,15 @@ if (leaderboardbutton != null) {
 }
 
 // ================ Social Registeration stuff ===========================
-const mintProfile = async () => {
+const mintProfile = async (address, username, avatar) => {
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const signer = provider.getSigner();
+  try {
 
-}
+  } catch (error) {
+
+  }
+};
 
 document.getElementById("registerButton").addEventListener("click", function(event) {
   event.preventDefault();
@@ -271,15 +277,11 @@ document.getElementById("registerButton").addEventListener("click", function(eve
   let address;
   if (connectedAccount) {
     address = JSON.parse(connectedAccount);
-    console.log("Username:", username);
-    console.log("Avatar URL:", avatarUrl);
-    console.log("Address:", address[0]);
-    // mintProfile()
+    mintProfile(address[0], username, avatarUrl)
   }
 
   usernameInput.value = "";
   avatarInput.value = "";
-
 });
 
 export { metamask };
