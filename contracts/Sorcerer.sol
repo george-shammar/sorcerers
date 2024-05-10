@@ -50,6 +50,3 @@ contract Sorcerer is ERC721 {
         return result;
     }
 }
-
-
-// Sorcerer, SOC
