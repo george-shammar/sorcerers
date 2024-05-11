@@ -42,7 +42,7 @@ We have attempted to solve the other common problems in-game, which are:
 - Bootstrap
 
 ## Getting Started
-Visit the website: [Live Version]()
+Visit the website: [SORCERER]()
  
 NB: The Rollapp- sorcerer_9704012-1 as at the time of this writing is not yet public. As a result of this, smart contract read and write may not be possible as of yet. However, video demonstration has been provided. Please see below details of the Sorcerer rollapp.
 ### Running Rollapp
@@ -56,7 +56,17 @@ NB: The Rollapp- sorcerer_9704012-1 as at the time of this writing is not yet pu
 - RPC URL: http://127.0.0.1:8545/   (public RPC to be provided)
 - Currency Symbol: SOC
 
-
+### Creating a Game Asset
 - Click the "Mint Now" button.
 - There are on-screen instructions about the status of the transaction. 
-- Upon successful confirmation of the transaction, the ipfs metadata of the asset is displayed for the users.
+- Upon successful confirmation of the transaction, proceed to download the game and enjoy. (Exclusive and private download link has been provided pre-release of the game)
+- Ensure that you're connected to network described above to enjoy the full capabilities of the game.
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
