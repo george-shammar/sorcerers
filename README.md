@@ -22,3 +22,9 @@ Visit the website: [Live Version]()
 - `SocialReward Contract: 0xD8282F9a8D4Ece779EfF6B4b2aac8a64cE065EdE`
 - `Leaderboard Contract: 0xe4Ee8fC5Dc0999ad98e9DD7889Aa9DFC38C2fF56`
 - `Socerer Token Contract: 0xD8282F9a8D4Ece779EfF6B4b2aac8a64cE065EdE`
+#### Blockchain
+Sorcerer leverages [Dymension's](https://dymension.xyz/) network of easily deployable and lightning fast modular blockchains called RollApps. This approach solves three main GameFi problems: Speed, Interoperability and Security.
+
+We have attempted to solve the other common problems in-game, which are:
+- Weak or no element of enjoyable gaming due to emphasis on earning.
+- Unsustainable game economic models.
