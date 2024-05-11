@@ -47,9 +47,16 @@ Visit the website: [Live Version]()
 NB: The Rollapp- sorcerer_9704012-1 as at the time of this writing is not yet public. As a result of this, smart contract read and write may not be possible as of yet. However, video demonstration has been provided. Please see below details of the Sorcerer rollapp.
 ### Running Rollapp
 ![screenshot](./Rollapp.png)
+
 - Click on the "Play Now" tab.
-- Click the "Connect Wallet" button and connect to your metamask wallet by choosing an address to connect with. If metamask is not installed on your browser, you'll be prompted and redirected to the metamask download page.
-- Select "Optimism Goerli Testnet" network on metamask.
+- Click the "Connect Wallet" button and connect with your metamask wallet by choosing an address to connect with. If metamask is not installed on your browser, you'll be prompted and redirected to the metamask download page.
+#### Connect to the sorcerer_9704012-1 rollapp - Metamask
+- Network Name: sorcerer_9704012-1
+- Chain ID: 9704012
+- RPC URL: http://127.0.0.1:8545/   (public RPC to be provided)
+- Currency Symbol: SOC
+
+
 - Click the "Mint Now" button.
 - There are on-screen instructions about the status of the transaction. 
 - Upon successful confirmation of the transaction, the ipfs metadata of the asset is displayed for the users.
