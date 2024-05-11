@@ -8,6 +8,6 @@ Sorcerer is a multi-level blockchain horror game set in a decrepit Cathedral ove
 ## Website
 Visit the website: [Live Version]()
 
-## Screenshots
+## Pictures
 ![screenshot](./main.png)
 ![screenshot](./play.png)
