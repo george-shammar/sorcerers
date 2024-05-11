@@ -31,3 +31,12 @@ We have attempted to solve the other common problems in-game, which are:
 
 ### GAME
 - Developed with the industry's leading game development tool, Unreal Engine 5.3.
+
+### Other tools
+- Solidity
+- JavaScript
+- IPFS/Filecoin
+- Ethers
+- HTML5
+- CSS3
+- Bootstrap
