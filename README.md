@@ -64,6 +64,22 @@ NB: The Rollapp- sorcerer_9704012-1 as at the time of this writing is not yet pu
 - Ensure that you're connected to network described above to enjoy the full capabilities of the game.
 
 ## Game Objective
+### Back Story
+In the shadowy depths of a forsaken town, a sinister sorcerer has arrived, wielding dark magic to unleash terror upon the world. His twisted ambition? To pry open the ancient "Gate of Hell" sealed within a hidden shrine nestled deep within the heart of an abandoned cemetery.
+
+As the sorcerer chants his unholy incantations, the very earth shudders and groans, and from the bowels of the underworld, legions of demons and zombies claw their way to the surface, their hungry eyes fixed upon the living.
+
+But there's a slim barrier, a feeble defense against the tide of darkness—a crumbling outer gate, barely standing behind the decrepit Cathedral. It strains against the onslaught of evil, but its strength is waning, its iron bars threatening to yield to the relentless assault.
+
+You, brave soul, are thrust into this nightmare, your fate entwined with the survival of humanity. Your mission: to hold the gate against the tide of malevolent creatures, to stand as a bulwark against the encroaching darkness.
+
+Wave after wave crashes upon you, a relentless onslaught that threatens to overwhelm your senses and sanity. The air is thick with the stench of decay, the ground quaking beneath the weight of demonic footfalls. Every shadow hides a lurking horror, every whisper a promise of doom.
+
+Yet you must steel yourself, for the gate's defenses are crumbling, its ancient wards failing under the strain of the sorcerer's dark magic. With each passing moment, the barrier weakens, its iron bars bending and twisting under the relentless assault.
+
+When the gate finally falls, all hope seems lost. But in the depths of despair, a glimmer of defiance sparks within your soul. You will not go down without a fight. With every ounce of strength and cunning, you make a desperate bid for survival, carving a path through the throngs of demonic fiends that seek to claim your soul.
+
+In this nightmarish realm, there is no sanctuary, no respite from the horrors that stalk your every step. Your only chance lies in your wits, your weapons, and your unyielding determination to defy the darkness and emerge victorious from the abyss. But remember, in the realm of nightmares, death is never the end—it is only the beginning of an eternity of torment.
 
 ## Game Controls (KEYBOARD)
 - Up Arrow - Forward
