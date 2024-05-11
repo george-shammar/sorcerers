@@ -8,6 +8,14 @@ Sorcerer is a multi-level blockchain horror game set in a decrepit Cathedral ove
 ## Website
 Visit the website: [Live Version]()
 
+## Video
+
 ## Pictures
 ![screenshot](./main.png)
 ![screenshot](./play.png)
+
+## Technical Brief
+### Web3/Blockchain components
+- 5 smartcontracts on the sorcerer_9704012-1 rollapp
+#### Contract Addresses
+- `SocialReward Contract: 0xD8282F9a8D4Ece779EfF6B4b2aac8a64cE065EdE`
