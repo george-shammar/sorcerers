@@ -9,6 +9,7 @@ Sorcerer is a multi-level blockchain horror game set in a decrepit Cathedral ove
 Visit the website: [Live Version]()
 
 ## Video
+Video Demostration: [Video Demo]()
 
 ## Pictures
 ![screenshot](./main.png)
@@ -63,6 +64,7 @@ NB: The Rollapp- sorcerer_9704012-1 as at the time of this writing is not yet pu
 - Ensure that you're connected to network described above to enjoy the full capabilities of the game.
 
 ## Game Objective
+
 ## Game Controls (KEYBOARD)
 - Up Arrow - Forward
 - Down Arrow - Backward
@@ -73,6 +75,7 @@ NB: The Rollapp- sorcerer_9704012-1 as at the time of this writing is not yet pu
 - Right Mouse + Left Mouse: Iron Sight Aiming and firing (More accurate shots).
 - Shift + Direction Key: Sprint
 
+We advise the use of a solid headset for maximum engagement.
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
