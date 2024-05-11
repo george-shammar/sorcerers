@@ -28,3 +28,6 @@ Sorcerer leverages [Dymension's](https://dymension.xyz/) network of easily deplo
 We have attempted to solve the other common problems in-game, which are:
 - Weak or no element of enjoyable gaming due to emphasis on earning.
 - Unsustainable game economic models.
+
+### GAME
+- Developed with the industry's leading game development tool, Unreal Engine 5.3.
