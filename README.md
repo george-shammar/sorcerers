@@ -10,4 +10,4 @@ Visit the website: [Live Version]()
 
 ## Screenshots
 ![screenshot](./main.png)
-![screenshot](./main.png)
+![screenshot](./play.png)
