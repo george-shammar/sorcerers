@@ -13,6 +13,8 @@ Video Demostration: [Video Demo]()
 
 ## Pictures
 ![screenshot](./main.png)
+![screenshot](./at_the_gate.png)
+![screenshot](./cathedral.png)
 ![screenshot](./play.png)
 
 ## Technical Brief
@@ -80,6 +82,11 @@ Yet you must steel yourself, for the gate's defenses are crumbling, its ancient 
 When the gate finally falls, all hope seems lost. But in the depths of despair, a glimmer of defiance sparks within your soul. You will not go down without a fight. With every ounce of strength and cunning, you make a desperate bid for survival, carving a path through the throngs of demonic fiends that seek to claim your soul.
 
 In this nightmarish realm, there is no sanctuary, no respite from the horrors that stalk your every step. Your only chance lies in your wits, your weapons, and your unyielding determination to defy the darkness and emerge victorious from the abyss. But remember, in the realm of nightmares, death is never the end—it is only the beginning of an eternity of torment.
+
+![screenshot](./santorium.png)
+![screenshot](./hold-the-gate.png)
+![screenshot](./altar.png)
+![screenshot](./outside.png)
 
 ## Game Controls (KEYBOARD)
 - Up Arrow - Forward
