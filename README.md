@@ -40,3 +40,16 @@ We have attempted to solve the other common problems in-game, which are:
 - HTML5
 - CSS3
 - Bootstrap
+
+## Getting Started
+Visit the website: [Live Version]()
+ 
+NB: The Rollapp- sorcerer_9704012-1 as at the time of this writing is not yet public. As a result of this, smart contract read and write may not be possible as of yet. However, video demonstration has been provided. Please see below details of the Sorcerer rollapp.
+### Running Rollapp
+![screenshot](./Rollapp.png)
+- Click on the "Play Now" tab.
+- Click the "Connect Wallet" button and connect to your metamask wallet by choosing an address to connect with. If metamask is not installed on your browser, you'll be prompted and redirected to the metamask download page.
+- Select "Optimism Goerli Testnet" network on metamask.
+- Click the "Mint Now" button.
+- There are on-screen instructions about the status of the transaction. 
+- Upon successful confirmation of the transaction, the ipfs metadata of the asset is displayed for the users.
