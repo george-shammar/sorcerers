@@ -6,10 +6,10 @@
 Sorcerer is a multi-level blockchain horror game set in a decrepit Cathedral overlooking an abandoned Cemetry. It takes you into the heart-pounding world of hardcore gaming where colossal landscapes tower before you and every detail bursts with hyper-realistic intensity! Prepare to be thrust to the very brink of excitement as we push the boundaries to the absolute extreme, delivering an unparalleled gaming experience that will leave you breathless!  
 
 ## Website
-Visit the website: [Live Version]()
+Visit the website: [Live Version](https://sorcerer.livewirre.com)
 
 ## Video
-Video Demostration: [Video Demo]()
+<!-- Video Demostration: [Video Demo]() -->
 
 ## Pictures
 ![screenshot](./main.png)
@@ -45,7 +45,7 @@ We have attempted to solve the other common problems in-game, which are:
 - Bootstrap
 
 ## Getting Started
-Visit the website: [SORCERER]()
+Visit the website: [SORCERER](https://sorcerer.livewirre.com)
  
 NB: The Rollapp- sorcerer_9704012-1 as at the time of this writing is not yet public. As a result of this, smart contract read and write may not be possible as of yet. However, video demonstration has been provided. Please see below details of the Sorcerer rollapp.
 ### Running Rollapp
